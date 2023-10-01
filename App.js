@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import Main from './Main';
-import { StyleSheet, AppRegistry } from 'react-native';
+import { AppRegistry } from 'react-native';
 import { Loader } from './components/Loader';
 
 export default function App() {
@@ -16,11 +16,3 @@ export default function App() {
   );
 }
 AppRegistry.registerComponent('project', () => App);
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     fontFamily: 'Roboto',
-
-//     backgroundColor: '#fff',
-//   },
-// });

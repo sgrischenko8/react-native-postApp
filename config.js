@@ -7,19 +7,21 @@ import { getFirestore } from 'firebase/firestore';
 // Функція для підключення сховища файлів в проект
 import { getStorage } from 'firebase/storage';
 
+import Config from 'react-native-config';
+
 // ----------part of tips:-------------
 import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import ReactNativeAsyncStorage from '@react-native-async-storage/async-storage';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCZrhbQ9LB44cRloTUP1MlkGC8XOneAaEw',
-  authDomain: 'project-47869.firebaseapp.com',
-  databaseURL: 'https://project-47869.firebaseio.com',
-  projectId: 'project-47869',
-  storageBucket: 'project-47869.appspot.com',
-  messagingSenderId: '778680888352',
-  appId: '1:778680888352:android:580073d17cc8e1f01ca045',
-  measurementId: 'G-measurement-id',
+  apiKey: `${Config.APP_ID}`,
+  authDomain: `${Config.AUTH_DOMAIN}`,
+  databaseURL: `${Config.DATA_BASE_URL}`,
+  projectId: `${Config.PROJECT_ID}`,
+  storageBucket: `${Config.STORAGE_BUCKET}`,
+  messagingSenderId: `${Config.MESSAGING_SENDER_ID}`,
+  appId: `${Config.APP_ID}`,
+  measurementId: `${Config.MEASURMENT_ID}`,
 };
 
 const app = initializeApp(firebaseConfig);
